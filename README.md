@@ -30,18 +30,13 @@ The project consists of the following directories and files:
     cd <repository_directory>
     ```
 
-2. **Create and activate a virtual environment**:
+2. **Create and activate a virtual environment with required libraries**:
     ```sh
-    python -m venv nlp_env
-    source nlp_env/bin/activate  # On Windows use `nlp_env\Scripts\activate`
+    conda create --name nlp_env --file requirements.txt
+    conda activate nlp_env
     ```
 
-3. **Install the required libraries**:
-    ```sh
-    pip install -r src/requirements.txt
-    ```
-
-4. **Download NLTK data**:
+3. **Download NLTK data**:
     ```python
     python -c "import nltk; nltk.download('averaged_perceptron_tagger'); nltk.download('punkt')"
     ```
